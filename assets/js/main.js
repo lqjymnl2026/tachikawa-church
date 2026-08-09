@@ -38,8 +38,8 @@
     },
     friends: {
       line: "欢迎来认识我们。",
-      sub: "我们每周都有小组，一起吃饭、聊天、读圣经。来坐坐吧。",
-      action: "看看小组",
+      sub: "我们每周都有查经班，一起吃饭、聊天、读圣经。来坐坐吧。",
+      action: "看看查经班",
       target: "#find"
     },
     jesus: {
@@ -51,7 +51,7 @@
     bible: {
       line: "真好，欢迎一起读。",
       sub: "我们每周一起读圣经、分享生活，也欢迎你一个人安静地读。",
-      action: "读经小组",
+      action: "查经班",
       target: "#find"
     },
     pray: {
@@ -81,7 +81,7 @@
     });
   });
 
-  /* ---------- 02 小组问答 ---------- */
+  /* ---------- 02 查经问答 ---------- */
   var answers = { 1: null, 2: null, 3: null };
   document.querySelectorAll(".quiz-opts").forEach(function (group) {
     group.addEventListener("click", function (e) {
