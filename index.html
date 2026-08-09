@@ -10,9 +10,10 @@
 </head>
 <body>
 
-  <!-- ==================== 导航 ==================== -->
+<div class="phone">
+  <!-- ==================== 顶部栏 ==================== -->
   <header class="nav" id="top">
-    <div class="container nav-inner">
+    <div class="nav-inner">
       <a class="brand" href="#home">
         <span class="brand-logo"><img src="assets/img/logo.svg" alt="立川华人教会"></span>
         <span class="brand-name">
@@ -20,14 +21,6 @@
           <span>在东京，有人陪你一起走</span>
         </span>
       </a>
-      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">☰</button>
-      <nav class="nav-links">
-        <a href="#home">首页</a>
-        <a href="#find">查经</a>
-        <a href="#explore">探索</a>
-        <a href="#life">生活</a>
-        <a href="#about">关于</a>
-      </nav>
     </div>
   </header>
 
@@ -340,13 +333,20 @@
         <span class="brand-name"><strong>立川华人教会</strong><span>在东京，有人陪你一起走</span></span>
       </a>
       <p class="footer-tagline">一起认识上帝，一起生活，一起成长，一起盼望。</p>
-      <nav class="footer-nav">
-        <a href="#home">首页</a><a href="#find">查经</a><a href="#explore">探索</a><a href="#life">生活</a><a href="#about">关于</a>
-      </nav>
       <p class="footer-copy">© <span class="js-year">2026</span> 立川华人教会 · 東京都立川市</p>
     </div>
   </footer>
+</div><!-- /.phone -->
 
-  <script src="assets/js/main.js?v=2"></script>
+  <!-- ==================== 底部标签导航（手机版） ==================== -->
+  <nav class="tabbar">
+    <a class="tab" href="#home"><span class="tab-ic">⌂</span><span class="tab-tx">首页</span></a>
+    <a class="tab" href="#find"><span class="tab-ic">✎</span><span class="tab-tx">查经</span></a>
+    <a class="tab" href="#explore"><span class="tab-ic">?</span><span class="tab-tx">探索</span></a>
+    <a class="tab" href="#life"><span class="tab-ic">✿</span><span class="tab-tx">生活</span></a>
+    <a class="tab" href="#about"><span class="tab-ic">✝</span><span class="tab-tx">关于</span></a>
+  </nav>
+
+  <script src="assets/js/main.js?v=3"></script>
 </body>
 </html>
