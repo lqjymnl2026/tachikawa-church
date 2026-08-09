@@ -1,3 +1,0 @@
-# tachikawa-church
-
-Test file.
