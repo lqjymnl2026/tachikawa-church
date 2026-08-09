@@ -10,17 +10,23 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  var toggle = document.querySelector(".nav-toggle");
-  var links = document.querySelector(".nav-links");
-  if (toggle && links) {
-    toggle.addEventListener("click", function () {
-      links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", links.classList.contains("open"));
+  /* ---------- 底部标签导航：滚动高亮 ---------- */
+  var tabLinks = document.querySelectorAll(".tabbar .tab");
+  var sections = ["home", "find", "explore", "life", "about"].map(function (id) {
+    return document.getElementById(id);
+  });
+  function highlightTab() {
+    var y = window.scrollY + window.innerHeight * 0.35;
+    var current = "home";
+    sections.forEach(function (sec) {
+      if (sec && sec.offsetTop <= y) current = sec.id;
     });
-    links.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") links.classList.remove("open");
+    tabLinks.forEach(function (t) {
+      t.classList.toggle("active", t.getAttribute("href") === "#" + current);
     });
   }
+  window.addEventListener("scroll", highlightTab, { passive: true });
+  window.addEventListener("load", highlightTab);
 
   /* ---------- 01 互动首页：状态选择 ---------- */
   var moodData = {
